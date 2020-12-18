@@ -12,13 +12,7 @@ exports.projectDBController = {
 
         if (req.query) {
 
-            const query = {
-                programmingLanguage: `${req.query.programmingLanguage}`, programmingLevel: { $gte: parseInt(`${req.query.programmingLevel}`) }, role: `${req.query.role}`
-            }
-
-            console.log(query);
-
-            Project.find({ programmingLanguage: `${req.query.programmingLanguage}`, programmingLevel: { $gte: parseInt(`${req.query.programmingLevel}`) }, role: `${req.query.role}` })
+            Project.find({programmingLanguage:`${req.query.programmingLanguage}`, programmingLevel: { $gte: parseInt(`${req.query.programmingLevel}`) }, role: `${req.query.role}` })
                 .then(docs => { res.json(docs) })
                 .catch(err => console.log(`Error getting the data from DB: ${err}`));
         }

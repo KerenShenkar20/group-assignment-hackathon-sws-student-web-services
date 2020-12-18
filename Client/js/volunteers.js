@@ -1,5 +1,5 @@
 // Change the name of the file to something less generic
-const service_url = 'http://localhost:3000/api/projects';
+const service_url = 'https://hackaton-open-source.herokuapp.com/api/projects';
 
 function getAllUsersFiltered(query) {
     $.ajax({

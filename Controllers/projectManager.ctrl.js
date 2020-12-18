@@ -13,6 +13,8 @@ exports.projectManagerDBController = {
     },
 
     addProjectManager(req, res){
+
+        console.log("something");
         ++projectManagerID;
         const newProjectManager = new projectManager({
             "id":projectManagerID,
