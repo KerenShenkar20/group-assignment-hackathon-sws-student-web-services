@@ -14,11 +14,10 @@ exports.projectManagerDBController = {
         ++projectManagerID;
         const newProjectManager = new projectManager({
             "id":projectManagerID,
-            "name": req.body.name,
-            "volunteersId": req.body.volunteersId,
-            "managerId":req.body.managerId,
-            "password": req.body.password,
-            "description": req.body.description
+            "first_name": req.body.first_name,
+            "last_name": req.body.last_name,
+            "email":req.body.email,
+            "projectId": req.body.projectId,
         })
 
         newProjectManager.save()
