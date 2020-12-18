@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000;
 
 const projectManagerRouter = require("./Routers/projectManager.router");
 const projectRouter = require("./Routers/project.router");
-const volunteerRouter = require("./Routers/volunteer.router");
+//const volunteerRouter = require("./Routers/volunteer.router");
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 
 app.use('/api/projectsManagers', projectManagerRouter.projectManagerRouter);   
 app.use('/api/projects', projectRouter.projectRouter);
-app.use('/api/volunteers', volunteerRouter.volunteerRouter);
+//app.use('/api/volunteers', volunteerRouter.volunteerRouter);
 
 app.use((err, req, res, next) => {
     console.error(err.stack);

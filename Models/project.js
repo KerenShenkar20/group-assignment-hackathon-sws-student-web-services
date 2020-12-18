@@ -8,6 +8,7 @@ const projectsSchema = new Schema({
     managerId: {type: Number, required: true},
     password: { type: String, required: true},
     description: { type: String, required: true},
+    
 }, { collection: 'projects'});
 
 

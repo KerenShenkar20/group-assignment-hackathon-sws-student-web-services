@@ -1,10 +1,10 @@
 const { Router } = require('express'); 
-const{ projectDBController} = require('./controllers/project.ctrl');
+const{ projectDBController} = require('../controllers/project.controller');
 
 const projectRouter = new Router();
 
 
-projectRouter.get('/', projectDBController.getProject);
+projectRouter.get('/', projectDBController.getProjects);
 projectRouter.post('/', projectDBController.createProject);
 
 

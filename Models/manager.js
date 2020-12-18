@@ -8,7 +8,7 @@ const managerSchema = new Schema({
     email: { type: String, required: true},
     projectId: { type: Number, required: true},
    
-}, { collection: 'manager'});
+}, { collection: 'managers'});
 
 
 const Manager = model('Manager', managerSchema);
