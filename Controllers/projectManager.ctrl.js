@@ -1,10 +1,12 @@
 // Change the name of the file if needed
 
 const projectManager = require('../Models/manager');
+
 let projectManagerID = 500;
+
 exports.projectManagerDBController = {
     getProjectManagers(req, res){         
-        projectManager.findOne({})            
+        projectManager.find({})            
             .then(docs => {res.json(docs)})
             .catch(err => console.log(`Error getting the data from DB: ${err}`));
            

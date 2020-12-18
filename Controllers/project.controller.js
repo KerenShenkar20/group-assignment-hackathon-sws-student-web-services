@@ -1,6 +1,6 @@
 const { query } = require('express');
 const { get } = require('http');
-const Project = require('./Models/project');
+const Project = require('../Models/project');
 
 let projectId = 100;
 let data;
