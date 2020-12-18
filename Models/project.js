@@ -7,6 +7,9 @@ const projectsSchema = new Schema({
     volunteersId: {type: Number, required: true},
     managerId: {type: Number, required: true},
     password: { type: String, required: true},
+    programmingLanguage: {type : String, required: true},
+    programmingLevel: { type: String, required: true},
+    role: { type: String, required: true},
     description: { type: String, required: true},
     
 }, { collection: 'projects'});
