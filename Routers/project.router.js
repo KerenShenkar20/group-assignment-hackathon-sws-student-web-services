@@ -9,3 +9,4 @@ projectRouter.post('/', projectDBController.createProject);
 
 
 
+module.exports = { projectRouter };
