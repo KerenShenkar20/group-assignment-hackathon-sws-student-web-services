@@ -13,12 +13,12 @@ exports.projectDBController = {
         if (req.query) {
 
             const query = {
-                programmingLanguage: `${req.body.programmingLanguage}`,
-                programmingLevel: `${req.body.programmingLevel}`,
-                role: `${req.body.role}`
+                programmingLanguage: `${req.query.programmingLanguage}`, programmingLevel: { $gte: parseInt(`${req.query.programmingLevel}`) }, role: `${req.query.role}`
             }
 
-            Project.find(query)
+            console.log(query);
+
+            Project.find({ programmingLanguage: `${req.query.programmingLanguage}`, programmingLevel: { $gte: parseInt(`${req.query.programmingLevel}`) }, role: `${req.query.role}` })
                 .then(docs => { res.json(docs) })
                 .catch(err => console.log(`Error getting the data from DB: ${err}`));
         }
@@ -28,13 +28,13 @@ exports.projectDBController = {
     createProject(req, res) {
         ++projectId;
 
-        const project = new Project({ 
-            "id": projectId, 
-            "name":req.body.name, 
-            "volunteersId": req.body,volunteersId, 
-            "password": req.body.password, 
+        const project = new Project({
+            "id": projectId,
+            "name": req.body.name,
+            "volunteersId": req.body, volunteersId,
+            "password": req.body.password,
             "description": req.body.description
-    })
+        })
 
 
         project.save()
