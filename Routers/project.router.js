@@ -6,3 +6,5 @@ const projectRouter = new Router();
 
 projectRouter.get('/', projectDBController.getProject);
 projectRouter.post('/', projectDBController.createProject);
+
+module.exports = { projectRouter };
