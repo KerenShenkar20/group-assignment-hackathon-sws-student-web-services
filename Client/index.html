@@ -8,44 +8,44 @@
                 integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styles.css"/>
 
-        <title>Hackathon</title>
-        <!-- Change the title to something less generic -->
+        <title>Landing Page Project Manager</title>
     </head>
     <body>
         <div id="wrapper">
-            <!-- The form template will help you 
+            <div class ="jumbotron">
+                <h1>Project Manager Page</h1>
+                <p>Please fill the form!</p>
+            </div>
                 <form>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="inputFirstName" class="form-label">First Name</label>
+                        <input type="first-name" class="form-control" id="inputFirstName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputLastName" class="form-label">Last Name</label>
+                        <input type="last-name" class="form-control" id="inputLastName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="projectPassword" class="form-label">Project password</label>
+                        <input type="password" class="form-control" id="password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp">
                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleDataList" class="form-label">Datalist example</label>
-                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-                        <datalist id="datalistOptions">
-                            <option value="San Francisco">
-                            <option value="New York">
-                            <option value="Seattle">
-                            <option value="Los Angeles">
-                            <option value="Chicago">
-                        </datalist>
+                        <label for="project-name" class="form-label">Project name</label>
+                        <input class="form-control" id="project-name" rows="3"></input>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
-              -->
         </div>
+        <section>
+            <button type="button" class="btn btn-info" id="show-button">Show volenteers data</button>
+            <div id = "volenteer-data" class="d-flex flex-row justify-content-center">
+                <p id="showData" class="d-flex flex-row justify-content-center"></p>
+            </div>
+        </section>
     </body>
 </html>
